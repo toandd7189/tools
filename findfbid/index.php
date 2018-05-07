@@ -16,9 +16,7 @@ if (isset($_POST['url'])) {
 
 	$result = curl_exec($ch);
 	curl_close($ch);
-	var_dump($result);die;
 	$uid = '';
-
 	if (isset(json_decode($result)->id))
 		$uid = json_decode($result)->id;
 }
